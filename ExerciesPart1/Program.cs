@@ -312,7 +312,7 @@
 
             //} while (choice == 'y' || choice == 'Y');
             //Console.WriteLine("\ngood bye");
-            //----------------------------------------------------
+            //--------------------------------------------------------
             //------------------- Geometry Calculator------------
 
             //Console.WriteLine("Geometry Calculator");
@@ -359,25 +359,47 @@
 
             //}
             //---------------------------------------------------------
-            //--------------Factorial of a Number------------------------
+            //--------------Factorial of a Number-----------------
 
-            Console.WriteLine("Enter a number to calculate its factorial ");
-            int N= int.Parse(Console.ReadLine());
+            ////Console.WriteLine("Enter a number to calculate its factorial ");
+            ////int N= int.Parse(Console.ReadLine());
 
-            if (N < 0)
+            ////if (N < 0)
+            ////{
+            ////    Console.WriteLine("Factorial is not defined for the negative numbers. ");
+            ////}
+            ////else
+            ////{
+            ////    long Factorial = 1;
+            ////    for ( int i =1;  i <= N; i++)
+            ////    {
+            ////        Factorial *= i;
+            ////    }
+
+            ////    Console.WriteLine("the Factorial of N is :" +Factorial);
+            //}
+            //-----------------------------------------------------------------
+            //-----------------Sum of Even and Odd Numbers----------------
+            Console.WriteLine("Enter a  number N: ");
+            int N = int.Parse(Console.ReadLine());
+
+            int EvenSum = 0;
+            int OddSum = 0;
+
+            for (int i=1; i <= N; i++ )
             {
-                Console.WriteLine("Factorial is not defined for the negative numbers. ");
-            }
-            else
-            {
-                long Factorial = 1;
-                for ( int i =1;  i <= N; i++)
+                if ( i % 2 == 0)
                 {
-                    Factorial *= i;
+                    EvenSum += i;
                 }
-
-                Console.WriteLine("the Factorial of N is :" +Factorial);
+                else
+                {
+                    OddSum += i;
+                }
+                Console.WriteLine("Sum of even numbers from 1 to N: " + EvenSum);
+                Console.WriteLine("Sum of odd numbers from 1 to N : " + OddSum);
             }
+
         }
     } 
 
