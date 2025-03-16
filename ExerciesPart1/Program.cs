@@ -315,54 +315,69 @@
             //----------------------------------------------------
             //------------------- Geometry Calculator------------
 
-            Console.WriteLine("Geometry Calculator");
-            Console.WriteLine("Choose a shape to calculate:");
-            Console.WriteLine("1. Circle (Calculate Area & Circumference)\n");
-            Console.WriteLine("2. Square (Calculate Area & Perimeter)\n ");
-            Console.WriteLine("3. Triangle (Calculate Area)\n ");
+            //Console.WriteLine("Geometry Calculator");
+            //Console.WriteLine("Choose a shape to calculate:");
+            //Console.WriteLine("1. Circle (Calculate Area & Circumference)\n");
+            //Console.WriteLine("2. Square (Calculate Area & Perimeter)\n ");
+            //Console.WriteLine("3. Triangle (Calculate Area)\n ");
 
-            Console.WriteLine("Enter the number corresponding to your shape choice:");
-            string choice = Console.ReadLine();
+            //Console.WriteLine("Enter the number corresponding to your shape choice:");
+            //string choice = Console.ReadLine();
 
-            switch (choice)
+            //switch (choice)
+            //{
+            //    case "1":
+            //        Console.WriteLine("Enter the redius of the circle:");
+            //        double redius = double.Parse(Console.ReadLine());
+            //        double areaCircle = Math.PI * Math.Pow(redius, 2);
+            //        double CircumferenceCircle = 2 * Math.PI * redius;
+            //        Console.WriteLine("area of the Circle: ");
+            //        Console.WriteLine("Circumference of the Circle: ");
+            //        break;
+
+            //    case "2":
+            //        Console.WriteLine("Enter the side length of the Square:");
+            //        double side = double.Parse(Console.ReadLine());
+            //        double AreaSquare = Math.Pow(side, 2);
+            //        double PerimeterSquare = 4 * side;
+            //        Console.WriteLine("area of the Square: ");
+            //        Console.WriteLine("Perimeter of the Square: ");
+            //        break;
+
+            //    case "3":
+
+            //        Console.WriteLine("Enter the base  of the Triangle :");
+            //        double baseTrinagle  = double.Parse(Console.ReadLine());
+            //        Console.WriteLine("Enter the height  of the Triangle :");
+            //        double heightTriangle  = double.Parse(Console.ReadLine());
+            //        double areaTriangle  = 0.5 * baseTrinagle * heightTriangle;
+            //        Console.WriteLine("area of the triangle : ");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalid choice. Please select a valid option. ");
+            //        break;
+
+            //}
+            //---------------------------------------------------------
+            //--------------Factorial of a Number------------------------
+
+            Console.WriteLine("Enter a number to calculate its factorial ");
+            int N= int.Parse(Console.ReadLine());
+
+            if (N < 0)
             {
-                case "1":
-                    Console.WriteLine("Enter the redius of the circle:");
-                    double redius = double.Parse(Console.ReadLine());
-                    double areaCircle = Math.PI * Math.Pow(redius, 2);
-                    double CircumferenceCircle = 2 * Math.PI * redius;
-                    Console.WriteLine("area of the Circle: ");
-                    Console.WriteLine("Circumference of the Circle: ");
-                    break;
-
-                case "2":
-                    Console.WriteLine("Enter the side length of the Square:");
-                    double side = double.Parse(Console.ReadLine());
-                    double AreaSquare = Math.Pow(side, 2);
-                    double PerimeterSquare = 4 * side;
-                    Console.WriteLine("area of the Square: ");
-                    Console.WriteLine("Perimeter of the Square: ");
-                    break;
-
-                case "3":
-
-                    Console.WriteLine("Enter the base  of the Triangle :");
-                    double baseTrinagle  = double.Parse(Console.ReadLine());
-                    Console.WriteLine("Enter the height  of the Triangle :");
-                    double heightTriangle  = double.Parse(Console.ReadLine());
-                    double areaTriangle  = 0.5 * baseTrinagle * heightTriangle;
-                    Console.WriteLine("area of the triangle : ");
-                    break;
-                default:
-                    Console.WriteLine("Invalid choice. Please select a valid option. ");
-                    break;
-
-
-
-
-
+                Console.WriteLine("Factorial is not defined for the negative numbers. ");
             }
+            else
+            {
+                long Factorial = 1;
+                for ( int i =1;  i <= N; i++)
+                {
+                    Factorial *= i;
+                }
 
+                Console.WriteLine("the Factorial of N is :" +Factorial);
+            }
         }
     } 
 
