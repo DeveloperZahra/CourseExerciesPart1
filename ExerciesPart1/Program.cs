@@ -257,62 +257,111 @@
             //}
             //--------------------------------------------------------
             //----------------- Basic ATM System-----------------
-            char choice;
-            do
+            //char choice;
+            //do
+            //{
+            //    Console.Clear();
+            //    Console.WriteLine("Enter the ATM_System balance :\n1. Withdraw Money\n2. Deposit Money ");
+            //    Console.WriteLine("3. Check Balance\n4. Exit ");
+
+            //    double balance = double.Parse(Console.ReadLine());
+
+            //    Console.WriteLine("Please select an option (1/2/3/4):");
+            //    int Amount  = int.Parse(Console.ReadLine());
+            //    balance = 1000;
+
+            //    switch (Amount)
+            //    {
+            //        case '1':
+            //            Console.WriteLine("Enter amount to Withdraw Money ");
+            //            double WithdrawAmount = double.Parse(Console.ReadLine());
+
+            //            if (WithdrawAmount > balance)
+            //            {
+            //                Console.WriteLine("insufficient");
+            //            }
+            //            else
+            //            {
+            //                balance -= WithdrawAmount;
+            //                Console.WriteLine("Withdraw successful!  New balance :");
+            //            }
+            //            break;
+
+            //        case '2':
+            //            Console.WriteLine("Enter amount to Deposit Money ");
+            //            double DepositAmount = double.Parse(Console.ReadLine());
+            //            balance += DepositAmount;
+            //            Console.WriteLine("Deposit successful!  New balance :");
+            //            break;
+            //        case '3':
+            //            Console.WriteLine("your current balance is:");
+            //            break;
+
+            //        case '4':
+            //            Console.WriteLine("Exiting... thank you for using the ATM system.");
+            //            break;
+
+            //        default:
+            //            Console.WriteLine("Invalid option, Please try again.");
+
+            //            break;
+            //    }
+            //    Console.WriteLine("Do you want another options ? y / n");
+            //    choice = Console.ReadKey().KeyChar;
+
+
+            //} while (choice == 'y' || choice == 'Y');
+            //Console.WriteLine("\ngood bye");
+            //----------------------------------------------------
+            //------------------- Geometry Calculator------------
+
+            Console.WriteLine("Geometry Calculator");
+            Console.WriteLine("Choose a shape to calculate:");
+            Console.WriteLine("1. Circle (Calculate Area & Circumference)\n");
+            Console.WriteLine("2. Square (Calculate Area & Perimeter)\n ");
+            Console.WriteLine("3. Triangle (Calculate Area)\n ");
+
+            Console.WriteLine("Enter the number corresponding to your shape choice:");
+            string choice = Console.ReadLine();
+
+            switch (choice)
             {
-                Console.Clear();
-                Console.WriteLine("Enter the ATM_System balance :\n1. Withdraw Money\n2. Deposit Money ");
-                Console.WriteLine("3. Check Balance\n4. Exit ");
+                case "1":
+                    Console.WriteLine("Enter the redius of the circle:");
+                    double redius = double.Parse(Console.ReadLine());
+                    double areaCircle = Math.PI * Math.Pow(redius, 2);
+                    double CircumferenceCircle = 2 * Math.PI * redius;
+                    Console.WriteLine("area of the Circle: ");
+                    Console.WriteLine("Circumference of the Circle: ");
+                    break;
 
-                double balance = double.Parse(Console.ReadLine());
+                case "2":
+                    Console.WriteLine("Enter the side length of the Square:");
+                    double side = double.Parse(Console.ReadLine());
+                    double AreaSquare = Math.Pow(side, 2);
+                    double PerimeterSquare = 4 * side;
+                    Console.WriteLine("area of the Square: ");
+                    Console.WriteLine("Perimeter of the Square: ");
+                    break;
 
-                Console.WriteLine("Please select an option (1/2/3/4):");
-                int Amount  = int.Parse(Console.ReadLine());
-                balance = 1000;
+                case "3":
 
-                switch (Amount)
-                {
-                    case '1':
-                        Console.WriteLine("Enter amount to Withdraw Money ");
-                        double WithdrawAmount = double.Parse(Console.ReadLine());
-
-                        if (WithdrawAmount > balance)
-                        {
-                            Console.WriteLine("insufficient");
-                        }
-                        else
-                        {
-                            balance -= WithdrawAmount;
-                            Console.WriteLine("Withdraw successful!  New balance :");
-                        }
-                        break;
-
-                    case '2':
-                        Console.WriteLine("Enter amount to Deposit Money ");
-                        double DepositAmount = double.Parse(Console.ReadLine());
-                        balance += DepositAmount;
-                        Console.WriteLine("Deposit successful!  New balance :");
-                        break;
-                    case '3':
-                        Console.WriteLine("your current balance is:");
-                        break;
-
-                    case '4':
-                        Console.WriteLine("Exiting... thank you for using the ATM system.");
-                        break;
-
-                    default:
-                        Console.WriteLine("Invalid option, Please try again.");
-
-                        break;
-                }
-                Console.WriteLine("Do you want another options ? y / n");
-                choice = Console.ReadKey().KeyChar;
+                    Console.WriteLine("Enter the base  of the Triangle :");
+                    double baseTrinagle  = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter the height  of the Triangle :");
+                    double heightTriangle  = double.Parse(Console.ReadLine());
+                    double areaTriangle  = 0.5 * baseTrinagle * heightTriangle;
+                    Console.WriteLine("area of the triangle : ");
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice. Please select a valid option. ");
+                    break;
 
 
-            } while (choice == 'y' || choice == 'Y');
-            Console.WriteLine("\ngood bye");
 
+
+
+            }
 
         }
     } 
