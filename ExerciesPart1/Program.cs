@@ -200,72 +200,134 @@
             //----------------------------------------------
             // ----------------Simple Calculator (Switch-Case)------------------
 
-            Console.Clear();
-            Console.WriteLine("Enter the operation number :\n1. Addition\n2. Subtraction ");
-            Console.WriteLine("3. Multiplication\n4. Division");
+            //Console.Clear();
+            //Console.WriteLine("Enter the operation number :\n1. Addition\n2. Subtraction ");
+            //Console.WriteLine("3. Multiplication\n4. Division");
 
-            int OperationNumber = int.Parse(Console.ReadLine());
+            //int OperationNumber = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter first number :");
-            int num1 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter first number :");
+            //int num1 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter second number :");
-            int num2 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter second number :");
+            //int num2 = int.Parse(Console.ReadLine());
 
-            double result = 0;
+            //double result = 0;
 
-            bool isActive = false;
+            //bool isActive = false;
 
-            switch (OperationNumber)
-            {
-                case 1:
-                    result = num1 + num2;
-                    break;
+            //switch (OperationNumber)
+            //{
+            //    case 1:
+            //        result = num1 + num2;
+            //        break;
 
-                case 2:
-                    result = num1 - num2;
-                    break;
+            //    case 2:
+            //        result = num1 - num2;
+            //        break;
 
-                case 3:
-                    result = num1 * num2;
-                    break;
+            //    case 3:
+            //        result = num1 * num2;
+            //        break;
 
-                case 4:
+            //    case 4:
 
-                    if (num2 == 0)
-                    {
-                        Console.WriteLine("Division by zero not allowed");
-                        isActive = true;
+            //        if (num2 == 0)
+            //        {
+            //            Console.WriteLine("Division by zero not allowed");
+            //            isActive = true;
 
-                    }
-                    else
-                    {
-                        result = num1 / num2;
-                    }
+            //        }
+            //        else
+            //        {
+            //            result = num1 / num2;
+            //        }
 
-                    break;
+            //        break;
 
-                default:
-                    Console.WriteLine("Error! ");
-                    isActive = true;
-                    break;
+            //    default:
+            //        Console.WriteLine("Error! ");
+            //        isActive = true;
+            //        break;
 
-            }
-            if (!isActive)
-            {
-                Console.WriteLine(result);
-            }
+            //}
+            //if (!isActive)
+            //{
+            //    Console.WriteLine(result);
+            //}
             //--------------------------------------------------------
             //----------------- Basic ATM System-----------------
+            char choice;
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("Enter the ATM_System balance :\n1. Withdraw Money\n2. Deposit Money ");
+                Console.WriteLine("3. Check Balance\n4. Exit ");
+
+                double balance = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("Please select an option (1/2/3/4):");
+                int Amount  = int.Parse(Console.ReadLine());
+                balance = 1000;
+
+                switch (Amount)
+                {
+                    case '1':
+                        Console.WriteLine("Enter amount to Withdraw Money ");
+                        double WithdrawAmount = double.Parse(Console.ReadLine());
+
+                        if (WithdrawAmount > balance)
+                        {
+                            Console.WriteLine("insufficient");
+                        }
+                        else
+                        {
+                            balance -= WithdrawAmount;
+                            Console.WriteLine("Withdraw successful!  New balance :");
+                        }
+                        break;
+
+                    case '2':
+                        Console.WriteLine("Enter amount to Deposit Money ");
+                        double DepositAmount = double.Parse(Console.ReadLine());
+                        balance += DepositAmount;
+                        Console.WriteLine("Deposit successful!  New balance :");
+                        break;
+                    case '3':
+                        Console.WriteLine("your current balance is:");
+                        break;
+
+                    case '4':
+                        Console.WriteLine("Exiting... thank you for using the ATM system.");
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid option, Please try again.");
+
+                        break;
+                }
+                Console.WriteLine("Do you want another options ? y / n");
+                choice = Console.ReadKey().KeyChar;
+
+
+            } while (choice == 'y' || choice == 'Y');
+            Console.WriteLine("\ngood bye");
 
 
         }
-    }
-
-
-
+    } 
 
 
         }
+    
+
+
+
+
+
+
+
+
+        
     
 
