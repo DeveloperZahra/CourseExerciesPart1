@@ -485,30 +485,50 @@ namespace CourseExerciesCsharp
             //-------------------------------------------------------
             //---------------------Print Pattern (For Loop)--------
 
-            int i, j;
+            // int i, j;
 
-            Console.WriteLine("Printing number of N: \n");
-           int N  = int.Parse(Console.ReadLine());
+            // Console.WriteLine("Printing number of N: \n");
+            //int N  = int.Parse(Console.ReadLine());
 
 
-            for (i = 1; i <= 5; i++)
+            // for (i = 1; i <= 5; i++)
+            // {
+
+            //     for (j = 1; j <= i; j++)
+
+            //     {
+            //         Console.Write("*");
+            //     }
+            //     Console.WriteLine();
+            // }
+
+            //--------------------------------------------------------------
+            //-------------- Print a Pyramid Pattern (For Loop)---------
+
+            Console.WriteLine("enter number of rows : ");
+            int n = int.Parse(Console.ReadLine());
+
+
+            for (int i = 1; i <= n; i++)
             {
+                for (int j = n - i; j >= 1; j--)
+                {
+                    Console.Write(" ");
+                }
 
-                for (j = 1; j <= i; j++)
-
+                for (int k = 1; k <= i * 2 - 1; k++)
                 {
                     Console.Write("*");
                 }
+
                 Console.WriteLine();
-            }
-
-                //--------------------------------------------------------------
-                //-------------- Print a Pyramid Pattern (For Loop)---------
-
             }
 
 
         }
+
+
+    }
     } 
 
 
