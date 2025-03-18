@@ -28,9 +28,9 @@ namespace CourseExerciesCsharp
 
 
             }
-            ////-----------------------------------------
+            
 
-            //---------the largest Number (2)-------------------
+            //---------the largest Number (2)------------
             static void largestNumber()
             {
                
@@ -64,8 +64,6 @@ namespace CourseExerciesCsharp
             }
 
 
-            //-----------------------------------------------------------------
-
             //----------Temperature Converter (3)--------------
             static void TemperatureConverter()
 
@@ -80,23 +78,33 @@ namespace CourseExerciesCsharp
             }
 
 
-            //--------------------------------
-            // Simple Discount Calculator (4)
+            //------------- Simple Discount Calculator (4)----------
+            static void SimpleDiscountCalculator()
+            {
+                Console.Write("enter the price of the item ");
+                double price = double.Parse(Console.ReadLine());
 
-            //Console.WriteLine("enter the price of the item ");
-            //double price = double.Parse(Console.ReadLine());
+                double discount = 0;
 
-            //if (price > 100)
-            //{
-            //    double Discount = price * 0.10;
-            //    double finalprice = price - Discount;
-            //    Console.WriteLine(" the finalprice after a 10% Discount is: " + finalprice);
+                double finalPrice;
 
-            //}
-            //else
-            //{
-            //    Console.WriteLine(" the finalprice is: " + price);
-            //}
+                if (price > 100)
+                {
+                    discount = (price / 100) * 10;
+                    finalPrice = price - discount;
+                    Console.WriteLine("Final price is:" + finalPrice);
+
+                }
+                else
+                {
+                    Console.WriteLine("Final price is:" + price);
+
+                }
+
+                Console.WriteLine("-------------------------------------------------");
+            }
+
+
             //Grading System (5)
             //int score;
             //Console.WriteLine("enter the student's score ");
