@@ -424,27 +424,17 @@ namespace CourseExerciesCsharp
 
             }
 
-            //-------------- Print a Pyramid Pattern (For Loop)---------
+            //-------------- Print a Pyramid Pattern (For Loop) (8)---------
+            static void PrintAPyramidPattern()
+            {
+                Console.Write("Enter N: ");
+                int n = int.Parse(Console.ReadLine());
+                for (int i = 1; i <= n; i++)
+                    Console.WriteLine(new string(' ', n - i) + new string('*', 2 * i - 1));
+            }
 
-            //Console.WriteLine("enter number of rows : ");
-            //int n = int.Parse(Console.ReadLine());
-
-
-            //for (int i = 1; i <= n; i++)
-            //{
-            //    for (int j = n - i; j >= 1; j--)
-            //    {
-            //        Console.Write(" ");
-            //    }
-
-            //    for (int k = 1; k <= i * 2 - 1; k++)
-            //    {
-            //        Console.Write("*");
-            //    }
-
-            //    Console.WriteLine();
-            //}
-            //---------------------------------------------------------
+           
+            
             //--------------Print a Diamond Pattern (For Loop)----
 
             //Console.WriteLine("enter number of rows : ");
