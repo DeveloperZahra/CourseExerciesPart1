@@ -7,7 +7,7 @@ namespace CourseExerciesCsharp
     {
         static void Main(string[] args)
         {
-            //------------Part 1--------------
+            //------------Part( 1 )--------------
             //------------- EvenOrOddNumber (1)----------
             static void EvenOrOddNumber()
 
@@ -211,8 +211,8 @@ namespace CourseExerciesCsharp
                 }
             }
 
-            //---------------Part 2-----------------------
-            // ----------------Simple Calculator (Switch-Case) ------------------
+            //---------------Part( 2 ) -----------------------
+            // ----------------Simple Calculator (Switch-Case) (1)------------------
             static void SimpleCalculatorSwitchCase()
             {
                 char choice;
@@ -288,62 +288,46 @@ namespace CourseExerciesCsharp
             }
 
             //--------------------------------------------------------
-            //----------------- Basic ATM System-----------------
-            //char choice;
-            //do
-            //{
-            //    Console.Clear();
-            //    Console.WriteLine("Enter the ATM_System balance :\n1. Withdraw Money\n2. Deposit Money ");
-            //    Console.WriteLine("3. Check Balance\n4. Exit ");
+            //----------------- Basic ATM System (2)-----------------
+            static void BasicATMSystem ()
+            {
+                double balance = 1000;
+                while (true)
+                {
+                    Console.WriteLine("\nATM Menu:");
+                    Console.WriteLine("1. Withdraw");
+                    Console.WriteLine("2. Deposit");
+                    Console.WriteLine("3. Check Balance");
+                    Console.WriteLine("4. Exit");
+                    Console.Write("Enter your choice: ");
+                    int choice = int.Parse(Console.ReadLine());
 
-            //    double balance = double.Parse(Console.ReadLine());
+                    switch (choice)
+                    {
+                        case 1:
+                            Console.Write("Enter withdrawal amount: ");
+                            double withdraw = double.Parse(Console.ReadLine());
+                            if (withdraw > balance) Console.WriteLine("Insufficient funds!");
+                            else { balance -= withdraw; Console.WriteLine($"Withdrawal successful! New balance: {balance}"); }
+                            break;
+                        case 2:
+                            Console.Write("Enter deposit amount: ");
+                            double deposit = double.Parse(Console.ReadLine());
+                            balance += deposit;
+                            Console.WriteLine($"Deposit successful! New balance: {balance}");
+                            break;
+                        case 3:
+                            Console.WriteLine($"Current Balance: {balance}");
+                            break;
+                        case 4:
+                            return;
+                        default:
+                            Console.WriteLine("Invalid choice!");
+                            break;
+                    }
+                }
+            }
 
-            //    Console.WriteLine("Please select an option (1/2/3/4):");
-            //    int Amount  = int.Parse(Console.ReadLine());
-            //    balance = 1000;
-
-            //    switch (Amount)
-            //    {
-            //        case '1':
-            //            Console.WriteLine("Enter amount to Withdraw Money ");
-            //            double WithdrawAmount = double.Parse(Console.ReadLine());
-
-            //            if (WithdrawAmount > balance)
-            //            {
-            //                Console.WriteLine("insufficient");
-            //            }
-            //            else
-            //            {
-            //                balance -= WithdrawAmount;
-            //                Console.WriteLine("Withdraw successful!  New balance :");
-            //            }
-            //            break;
-
-            //        case '2':
-            //            Console.WriteLine("Enter amount to Deposit Money ");
-            //            double DepositAmount = double.Parse(Console.ReadLine());
-            //            balance += DepositAmount;
-            //            Console.WriteLine("Deposit successful!  New balance :");
-            //            break;
-            //        case '3':
-            //            Console.WriteLine("your current balance is:");
-            //            break;
-
-            //        case '4':
-            //            Console.WriteLine("Exiting... thank you for using the ATM system.");
-            //            break;
-
-            //        default:
-            //            Console.WriteLine("Invalid option, Please try again.");
-
-            //            break;
-            //    }
-            //    Console.WriteLine("Do you want another options ? y / n");
-            //    choice = Console.ReadKey().KeyChar;
-
-
-            //} while (choice == 'y' || choice == 'Y');
-            //Console.WriteLine("\ngood bye");
             //--------------------------------------------------------
             //------------------- Geometry Calculator------------
 
