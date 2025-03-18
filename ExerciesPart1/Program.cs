@@ -472,8 +472,30 @@ namespace CourseExerciesCsharp
             }
 
 
-            //--------------------------------------------------
+            //-----------------Guess Game (10)--------------
+            static void GuessGame()
+            {
+                Random rand = new Random();
+                int target = rand.Next(1, 101);
 
+                int guess;
+
+                do
+                {
+                    Console.Write("Guess the number (1-100): ");
+                    guess = int.Parse(Console.ReadLine());
+
+
+                    if (guess > target)
+                        Console.WriteLine("Try Lower!");
+                    else if (guess < target)
+                        Console.WriteLine("Try Higher!");
+                    else
+                        Console.WriteLine("You Win!");
+
+
+                } while (guess != target);
+            }
 
 
 
