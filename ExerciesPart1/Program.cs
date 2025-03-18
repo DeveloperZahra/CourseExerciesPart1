@@ -190,43 +190,26 @@ namespace CourseExerciesCsharp
             }
 
 
+            //-------Simple Calculator (9)--------
+            static void SimpleCalculator()
+            {
+                Console.Write("Enter first number: ");
+                double num1 = double.Parse(Console.ReadLine());
+                Console.Write("Enter operator (+, -, *, /): ");
+                char op = Console.ReadKey().KeyChar;
+                Console.Write("\nEnter second number: ");
+                double num2 = double.Parse(Console.ReadLine());
 
-            //-------------------------------------------------------
+                switch (op)
+                {
+                    case '+': Console.WriteLine($"Result: {num1 + num2}"); break;
+                    case '-': Console.WriteLine($"Result: {num1 - num2}"); break;
+                    case '*': Console.WriteLine($"Result: {num1 * num2}"); break;
+                    case '/': Console.WriteLine(num2 != 0 ? $"Result: {num1 / num2}" : "Error: Division by zero!"); break;
+                    default: Console.WriteLine("Invalid operator!"); break;
+                }
+            }
 
-            //// Simple Calculator (9)
-            //Console.WriteLine(" enter the first number:");
-            //double num1 = double.Parse(Console.ReadLine());
-
-            //Console.WriteLine("enter an operator (+, -, *, /): ");
-            //char op = Console.ReadLine()[0];
-
-            //Console.WriteLine(" enter the second number:");
-            //double num2 = double.Parse(Console.ReadLine());
-
-            //double result = 0;
-
-            //if (op == '+')
-            //{
-            //    result = num1 + num2;
-            //}
-            //else if (op == '-')
-            //{
-            //    result = num1 - num2;
-            //}
-
-            //else if (op == '*')
-            //{
-            //    result = num1 * num2;
-            //}
-            //else if (op == '/')
-            //{
-            //    result = num1 / num2;
-            //}
-            //else
-            //{
-            //    Console.WriteLine("invalid operator");
-
-            //}
             //----------------------------------------------
             // ----------------Simple Calculator (Switch-Case)------------------
 
