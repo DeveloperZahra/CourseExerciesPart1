@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CourseExerciesCsharp
 {
@@ -364,8 +365,16 @@ namespace CourseExerciesCsharp
                 }
             }
 
-            //---------------------------------------------------------
-            //--------------Factorial of a Number-----------------
+            //--------------Factorial of a Number (4)-----------------
+            static void FactorialOfANumber()
+            {
+                Console.Write("Enter a number: ");
+                int n = int.Parse(Console.ReadLine());
+                long fact = 1;
+                for (int i = 1; i <= n; i++) fact *= i;
+                Console.WriteLine($"Factorial: {fact}");
+
+            }
 
             //Console.WriteLine("Enter a number to calculate its factorial ");
             //int N= int.Parse(Console.ReadLine());
