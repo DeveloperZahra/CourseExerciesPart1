@@ -150,19 +150,22 @@ namespace CourseExerciesCsharp
                 Console.WriteLine(" --------------------------------------------------------------");
             }
 
-            //-------------------------------------------------
 
-            //Days to Weeks and Days Converte (7)
+            //------Days to Weeks and Days Converte (7)------
+            static void DaystoWeeksandDaysConverte()
+            {
+                Console.WriteLine(" enter the number of days: ");
+                int totaldays = int.Parse(Console.ReadLine());
 
-            //Console.WriteLine(" enter the number of days: ");
-            //int totaldays = int.Parse(Console.ReadLine());
+                int weeks = totaldays / 7;
+                int remainingdays = totaldays % 7;
 
-            //int weeks = totaldays / 7;
-            //int remainingdays = totaldays % 7;
+                Console.WriteLine(totaldays + " days = " + weeks + " week(s) and " + remainingdays + " day(s)");
+                Console.WriteLine("-------------------------------------------------");
+            }
 
-            //Console.WriteLine(" days is equal to:" + totaldays);
-            //Console.WriteLine(" week is equal to:" + remainingdays);
-            //----------------------------------------------------------
+
+
 
             //Electricity Bill Calculator (8)
 
