@@ -105,38 +105,31 @@ namespace CourseExerciesCsharp
             }
 
 
-            //Grading System (5)
-            //int score;
-            //Console.WriteLine("enter the student's score ");
-            //score = int.Parse(Console.ReadLine());
+            //------------Grading System (5)-------------------
+            static void GradingSystem()
+            {
+                int score;
+                Console.Write("enter the student's score ");
+                score = int.Parse(Console.ReadLine());
+                char grade;
 
-            //if (score >= 90 && score <= 100)
-            //{
-            //    Console.WriteLine("Grade: A");
+                if (score >= 90)
+                    grade = 'A';
+                else if (score >= 80)
+                    grade = 'B';
+                else if (score >= 70)
+                    grade = 'C';
+                else if (score >= 60)
+                    grade = 'D';
+                else
+                    grade = 'F';
+                {
+                    Console.WriteLine("The student's grade is: " + grade);
+                    Console.WriteLine("-------------------------------------------------");
+                }
 
-            //}
-            //else if (score >= 80 && score <= 89)
-            //{
-            //    Console.WriteLine("Grade: B");
-            //}
-            //else if (score >= 70 && score <= 79)
-            //{
-            //    Console.WriteLine("Grade: C");
+            }
 
-            //}
-            //else if (score >= 60 && score <= 68)
-            //{
-            //    Console.WriteLine("Grade: D");
-            //}
-            //else if (score < 60 )
-            //{
-            //    Console.WriteLine("Grade: F");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("invalid score> please enter a valid score between 0 and 100.");
-
-            //}
             //------------------------------------
 
             //-------------Swap Two Numbers(6)---------------
