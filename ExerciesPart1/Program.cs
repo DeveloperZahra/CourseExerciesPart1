@@ -432,44 +432,46 @@ namespace CourseExerciesCsharp
                 for (int i = 1; i <= n; i++)
                     Console.WriteLine(new string(' ', n - i) + new string('*', 2 * i - 1));
             }
-
-           
             
-            //--------------Print a Diamond Pattern (For Loop)----
+            //--------------Print a Diamond Pattern (For Loop) (9)----
+            static void PrintADiamondPattern()
+            {
+                Console.WriteLine("enter number of rows : ");
+                int n = int.Parse(Console.ReadLine());
 
-            //Console.WriteLine("enter number of rows : ");
-            //int n = int.Parse(Console.ReadLine());
+
+                for (int i = 1; i <= n; i++)
+                {
+                    for (int j = n - i; j >= 1; j--)
+                    {
+                        Console.Write(" ");
+                    }
+
+                    for (int k = 1; k <= i * 2 - 1; k++)
+                    {
+                        Console.Write("*");
+                    }
+
+                    Console.WriteLine();
+                }
+
+                for (int i = n - 1; i >= 1; i--)
+                {
+                    for (int j = n; j > i; j--)
+                    {
+                        Console.Write(" ");
+                    }
+
+                    for (int k = 1; k <= i * 2 - 1; k++)
+                    {
+                        Console.Write("*");
+                    }
+
+                    Console.WriteLine();
+                }
+            }
 
 
-            //for (int i = 1; i <= n; i++)
-            //{
-            //    for (int j = n - i; j >= 1; j--)
-            //    {
-            //        Console.Write(" ");
-            //    }
-
-            //    for (int k = 1; k <= i * 2 - 1; k++)
-            //    {
-            //        Console.Write("*");
-            //    }
-
-            //    Console.WriteLine();
-            //}
-
-            //for (int i = n - 1; i >= 1; i--)
-            //{
-            //    for (int j = n; j > i; j--)
-            //    {
-            //        Console.Write(" ");
-            //    }
-
-            //    for (int k = 1; k <= i * 2 - 1; k++)
-            //    {
-            //        Console.Write("*");
-            //    }
-
-            //    Console.WriteLine();
-            //}
             //--------------------------------------------------
 
 
