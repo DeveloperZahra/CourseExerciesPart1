@@ -130,24 +130,26 @@ namespace CourseExerciesCsharp
 
             }
 
-            //------------------------------------
-
+         
             //-------------Swap Two Numbers(6)---------------
+            static void SwapTwoNumbers()
+            {
+                Console.WriteLine(" enter the first number ");
+                int num1 = int.Parse(Console.ReadLine());
 
-            //Console.WriteLine(" enter the first number ");
-            //int num1 = int.Parse(Console.ReadLine());
-
-            //Console.WriteLine(" enter the second number ");
-            //int num2 = int.Parse(Console.ReadLine());
+                Console.WriteLine(" enter the second number ");
+                int num2 = int.Parse(Console.ReadLine());
 
 
-            //int temp;
-            //temp = num1;
-            //num1 = num2;
-            //num2 = temp;
+                int temp;
+                temp = num1;
+                num1 = num2;
+                num2 = temp;
 
-            //Console.WriteLine(" after swapping:  first number = " + num1+" , second number ="+ num2);
-            //Console.WriteLine(" --------------------------------------------------------------");
+                Console.WriteLine(" after swapping:  first number = " + num1 + " , second number =" + num2);
+                Console.WriteLine(" --------------------------------------------------------------");
+            }
+
             //-------------------------------------------------
 
             //Days to Weeks and Days Converte (7)
