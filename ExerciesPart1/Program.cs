@@ -6,50 +6,64 @@ namespace CourseExerciesCsharp
     {
         static void Main(string[] args)
         {
-            //// EvenOrOddNumber (1)
-            //int number;
+            //------------- EvenOrOddNumber (1)----------
+            static void EvenOrOddNumber()
 
-            //Console.WriteLine("enter a number:");
-            //number = int.Parse(Console.ReadLine());
+            {
+                int number;
 
-            //if (number % 2 == 0)
-            //{
-            //    Console.WriteLine("number is even.");
-            //}
+                Console.WriteLine("enter a number:");
+                number = int.Parse(Console.ReadLine());
 
-            //else
-            //{
-            //    Console.WriteLine("number is odd.");
-            //}
+                if (number % 2 == 0)
+                {
+                    Console.WriteLine("number is even.");
+                }
+
+                else
+                {
+                    Console.WriteLine("---------------------------------");
+                }
+
+
+            }
             ////-----------------------------------------
-            ///
+
+            //---------the largest Number (2)-------------------
+            static void largestNumber()
+            {
+                int num1, num2, num3;
+
+                Console.WriteLine(" Enter the first number: ");
+                num1 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine(" Enter the second number: ");
+                num2 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine(" Enter the third number: ");
+                num3 = int.Parse(Console.ReadLine());
+
+                int largest = num1;
+
+                if (largest > num2)
+                {
+                    if (largest > num3)
+                        Console.WriteLine("The largest number is:" + largest);
+                }
+                else
+                {
+                    largest = num2;
+
+                    if (largest > num3)
+                        Console.WriteLine("The largest number is:" + largest);
+                    else
+                        Console.WriteLine("The largest number is:" + num3);
+
+                }
+
+            }
 
 
-            //the largest Number (2)
-
-            //int num1, num2, num3;
-
-            //Console.WriteLine(" Enter the first number: ");
-            //num1 = int.Parse(Console.ReadLine());
-
-            //Console.WriteLine(" Enter the second number: ");
-            //num2 = int.Parse(Console.ReadLine());
-
-            //Console.WriteLine(" Enter the third number: ");
-            //num3 = int.Parse(Console.ReadLine());
-
-            //if (num1 >= num2 && num1 >= num3)
-            //{
-            //    Console.WriteLine("the largest number is " + num1);
-            //}
-            //else if (num2 >= num1 && num2 >= num3)
-            //{
-            //    Console.WriteLine("the largest number is " + num2);
-            //}
-            //else
-            //{
-            //    Console.WriteLine("the largest number is " + num3);
-            //}
             //-----------------------------------------------------------------
 
             //Temperature Converter (3)
@@ -112,7 +126,7 @@ namespace CourseExerciesCsharp
             //}
             //------------------------------------
 
-            //Swap Two Numbers (6)
+            //-------------Swap Two Numbers(6)---------------
 
             //Console.WriteLine(" enter the first number ");
             //int num1 = int.Parse(Console.ReadLine());
@@ -121,12 +135,13 @@ namespace CourseExerciesCsharp
             //int num2 = int.Parse(Console.ReadLine());
 
 
-            //int temp = num1;
+            //int temp;
+            //temp = num1;
             //num1 = num2;
             //num2 = temp;
 
-            //Console.WriteLine(" after swap num1:" +num1);
-            //Console.WriteLine(" after swap num2:" + num2);
+            //Console.WriteLine(" after swapping:  first number = " + num1+" , second number ="+ num2);
+            //Console.WriteLine(" --------------------------------------------------------------");
             //-------------------------------------------------
 
             //Days to Weeks and Days Converte (7)
@@ -363,23 +378,16 @@ namespace CourseExerciesCsharp
             //---------------------------------------------------------
             //--------------Factorial of a Number-----------------
 
-            ////Console.WriteLine("Enter a number to calculate its factorial ");
-            ////int N= int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter a number to calculate its factorial ");
+            //int N= int.Parse(Console.ReadLine());
 
-            ////if (N < 0)
-            ////{
-            ////    Console.WriteLine("Factorial is not defined for the negative numbers. ");
-            ////}
-            ////else
-            ////{
-            ////    long Factorial = 1;
-            ////    for ( int i =1;  i <= N; i++)
-            ////    {
-            ////        Factorial *= i;
-            ////    }
-
-            ////    Console.WriteLine("the Factorial of N is :" +Factorial);
+            //int result = 1;
+            //for (int i = 1; i <= N; i++)
+            //{
+            //    result *= i;
             //}
+            //Console.WriteLine(result);
+
             //-----------------------------------------------------------------
             //-----------------Sum of Even and Odd Numbers----------------
             //Console.WriteLine("Enter a  number N: ");
@@ -505,24 +513,63 @@ namespace CourseExerciesCsharp
             //--------------------------------------------------------------
             //-------------- Print a Pyramid Pattern (For Loop)---------
 
-            Console.WriteLine("enter number of rows : ");
-            int n = int.Parse(Console.ReadLine());
+            //Console.WriteLine("enter number of rows : ");
+            //int n = int.Parse(Console.ReadLine());
 
 
-            for (int i = 1; i <= n; i++)
-            {
-                for (int j = n - i; j >= 1; j--)
-                {
-                    Console.Write(" ");
-                }
+            //for (int i = 1; i <= n; i++)
+            //{
+            //    for (int j = n - i; j >= 1; j--)
+            //    {
+            //        Console.Write(" ");
+            //    }
 
-                for (int k = 1; k <= i * 2 - 1; k++)
-                {
-                    Console.Write("*");
-                }
+            //    for (int k = 1; k <= i * 2 - 1; k++)
+            //    {
+            //        Console.Write("*");
+            //    }
 
-                Console.WriteLine();
-            }
+            //    Console.WriteLine();
+            //}
+            //---------------------------------------------------------
+            //--------------Print a Diamond Pattern (For Loop)----
+
+            //Console.WriteLine("enter number of rows : ");
+            //int n = int.Parse(Console.ReadLine());
+
+
+            //for (int i = 1; i <= n; i++)
+            //{
+            //    for (int j = n - i; j >= 1; j--)
+            //    {
+            //        Console.Write(" ");
+            //    }
+
+            //    for (int k = 1; k <= i * 2 - 1; k++)
+            //    {
+            //        Console.Write("*");
+            //    }
+
+            //    Console.WriteLine();
+            //}
+
+            //for (int i = n - 1; i >= 1; i--)
+            //{
+            //    for (int j = n; j > i; j--)
+            //    {
+            //        Console.Write(" ");
+            //    }
+
+            //    for (int k = 1; k <= i * 2 - 1; k++)
+            //    {
+            //        Console.Write("*");
+            //    }
+
+            //    Console.WriteLine();
+            //}
+            //--------------------------------------------------
+
+
 
 
         }
