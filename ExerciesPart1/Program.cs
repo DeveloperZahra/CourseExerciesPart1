@@ -389,87 +389,31 @@ namespace CourseExerciesCsharp
             }
 
             
-            //-----------Scientific Calculator (Switch-Case & Math Functions)---------
+            //-----------Scientific Calculator (Switch-Case & Math Functions) (6)---------
+            static void ScientificCalculator()
+            {
+                Console.Write("Choose operation (sin, cos, tan, sqrt, log, pow): ");
+                string op = Console.ReadLine();
+                Console.Write("Enter number: ");
+                double num = double.Parse(Console.ReadLine());
 
-            //Console.WriteLine("Scientific Calculator");
-            //Console.WriteLine("Choose an operation");
-            //Console.WriteLine("1. sin (sine)");
-            //Console.WriteLine("2. cos (cosine)");
-            //Console.WriteLine("3. tan (tangent)");
-            //Console.WriteLine("4. sqrt (Square Root)");
-            //Console.WriteLine("5. log (logarithm)");
-            //Console.WriteLine("6. pow (Power)");
+                switch (op)
+                {
+                    case "sin": Console.WriteLine($"Result: {Math.Sin(num)}"); break;
+                    case "cos": Console.WriteLine($"Result: {Math.Cos(num)}"); break;
+                    case "tan": Console.WriteLine($"Result: {Math.Tan(num)}"); break;
+                    case "sqrt": Console.WriteLine($"Result: {Math.Sqrt(num)}"); break;
+                    case "log": Console.WriteLine($"Result: {Math.Log(num)}"); break;
+                    case "pow":
+                        Console.Write("Enter exponent: ");
+                        double exp = double.Parse(Console.ReadLine());
+                        Console.WriteLine($"Result: {Math.Pow(num, exp)}");
+                        break;
+                    default: Console.WriteLine("Invalid operation!"); break;
+                }
+            }
 
-
-            //Console.WriteLine("Enter the number corresponding to your choice (1-6):");
-            //string operation = Console.ReadLine();
-
-            //switch (operation)
-            //{
-
-            //    case "1":
-            //        Console.WriteLine("Enter the angle in degrees:");
-            //        double angleSin = double.Parse(Console.ReadLine());
-            //        double SinResult = Math.Sin(angleSin * Math.PI / 180);
-            //        Console.WriteLine("sin  + angleSin = SinResult");
-            //        break;
-
-            //    case "2":
-            //        Console.WriteLine("Enter the angle in degrees:");
-            //        double angleCos = double.Parse(Console.ReadLine());
-            //        double CosResult = Math.Cos(angleCos * Math.PI / 180);
-            //        Console.WriteLine("Cos  + angleCos = CosResult");
-            //        break;
-
-            //    case "3":
-            //        Console.WriteLine("Enter the angle in degrees:");
-            //        double angleTan = double.Parse(Console.ReadLine());
-            //        double TanResult = Math.Cos(angleTan * Math.PI / 180);
-            //        Console.WriteLine("Tan  + ngleTan = TanResult");
-            //        break;
-
-            //    case "4":
-            //        Console.WriteLine("Enter the number to find the square root of:");
-            //        double sqrtNum  = double.Parse(Console.ReadLine());
-            //       if (sqrtNum < 0 )
-            //        {
-            //            Console.WriteLine(" Cannot calculate the square root of a negative number."); 
-            //        }
-            //       else
-            //        {
-            //            double sqrtResult = double.Parse(Console.ReadLine());
-            //            Console.WriteLine("sqrt +sqrtNum = sqrtResult ");
-            //        }
-            //        break;
-
-            //    case "5":
-            //        Console.WriteLine("Enter the number to find the logarithm of ( base 10):");
-            //        double logNum = double.Parse(Console.ReadLine());
-            //        if (logNum <= 0)
-            //        {
-            //            Console.WriteLine(" logarithm is not defined for zero or negative numbers.");
-            //        }
-            //        else
-            //        {
-            //            double logResult = double.Parse(Console.ReadLine());
-            //            Console.WriteLine("log +logNum = logResult ");
-            //        }
-            //        break;
-
-            //    case "6":
-            //        Console.WriteLine("Enter the base  number :");
-            //        double baseNum = double.Parse(Console.ReadLine());
-            //        Console.WriteLine("Enter the exponent:");
-            //        double exponent = double.Parse(Console.ReadLine());
-            //        double powResult = Math.Pow(baseNum , exponent);
-            //        Console.WriteLine("raised to the power of  +exponent = powResult ");
-            //        break;
-
-            //    default:
-            //           Console.WriteLine("Invalid choice. Please enter a number between 1 and 6. ");
-            //     break;
-            //}
-            //-------------------------------------------------------
+           
             //---------------------Print Pattern (For Loop)--------
 
             // int i, j;
