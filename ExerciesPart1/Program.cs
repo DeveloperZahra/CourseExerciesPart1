@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Numerics;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CourseExerciesCsharp
@@ -376,38 +377,18 @@ namespace CourseExerciesCsharp
 
             }
 
-            //Console.WriteLine("Enter a number to calculate its factorial ");
-            //int N= int.Parse(Console.ReadLine());
+            //-----------------Sum of Even and Odd Numbers (5)----------------
+            static void SumOfEvenAndOddNumbers()
+            {
+                Console.Write("Enter N: ");
+                int n = int.Parse(Console.ReadLine());
+                int sumEven = 0, sumOdd = 0;
+                for (int i = 1; i <= n; i++)
+                    if (i % 2 == 0) sumEven += i; else sumOdd += i;
+                Console.WriteLine($"Sum of Even: {sumEven}, Sum of Odd: {sumOdd}");
+            }
 
-            //int result = 1;
-            //for (int i = 1; i <= N; i++)
-            //{
-            //    result *= i;
-            //}
-            //Console.WriteLine(result);
-
-            //-----------------------------------------------------------------
-            //-----------------Sum of Even and Odd Numbers----------------
-            //Console.WriteLine("Enter a  number N: ");
-            //int N = int.Parse(Console.ReadLine());
-
-            //int EvenSum = 0;
-            //int OddSum = 0;
-
-            //for (int i=1; i <= N; i++ )
-            //{
-            //    if ( i % 2 == 0)
-            //    {
-            //        EvenSum += i;
-            //    }
-            //    else
-            //    {
-            //        OddSum += i;
-            //    }
-            //    Console.WriteLine("Sum of even numbers from 1 to N: " + EvenSum);
-            //    Console.WriteLine("Sum of odd numbers from 1 to N : " + OddSum);
-            //}
-            //------------------------------------------------------------------------------
+            
             //-----------Scientific Calculator (Switch-Case & Math Functions)---------
 
             //Console.WriteLine("Scientific Calculator");
