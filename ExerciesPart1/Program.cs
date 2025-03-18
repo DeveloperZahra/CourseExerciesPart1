@@ -164,30 +164,32 @@ namespace CourseExerciesCsharp
                 Console.WriteLine("-------------------------------------------------");
             }
 
+            //--------Electricity Bill Calculator (8)--------
+            static void ElectricityBillCalculator()
+
+            {
+                Console.WriteLine("enter the number of units consumed");
+                int unit = int.Parse(Console.ReadLine());
+
+                double bill = 0;
+                if (unit <= 100)
+                {
+                    bill = unit * 0.5;
+                }
+
+                else if (unit <= 300)
+                {
+                    bill = (100 * 0.5) + (unit - 100) * 0.75);
+                }
+                else
+                {
+                    bill = (100 * 0.5) + (200 * 0.75) + ((unit - 300) * 1);
+                }
+                Console.WriteLine("the total electricity bill for:" + unit);
+                Console.WriteLine("the total of unit:" + bill);
+            }
 
 
-
-            //Electricity Bill Calculator (8)
-
-            //Console.WriteLine("enter the number of units consumed");
-            //int unit =int.Parse(Console.ReadLine());
-
-            //double bill = 0;
-            //if (unit <= 100)
-            //{
-            //    bill = unit * 0.5;
-            //}
-
-            //else if (unit <= 300)
-            //{
-            //    bill = (100 * 0.5) + (unit - 100) * 0.75);
-            //}
-            //else
-            //{
-            //    bill = (100 * 0.5) + (200 * 0.75) + ((unit - 300) * 1);
-            //}
-            //Console.WriteLine("the total electricity bill for:" + unit);
-            //Console.WriteLine("the total of unit:" + bill);
 
             //-------------------------------------------------------
 
