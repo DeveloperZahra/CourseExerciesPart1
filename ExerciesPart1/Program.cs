@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
 namespace CourseExerciesCsharp
 {
@@ -65,14 +66,19 @@ namespace CourseExerciesCsharp
 
             //-----------------------------------------------------------------
 
-            //Temperature Converter (3)
+            //----------Temperature Converter (3)--------------
+            static void TemperatureConverter()
 
-            //double Celsius;
-            //Console.WriteLine("enter Temperature in celsius:");
-            //double celsius = double.Parse(Console.ReadLine());
+            {
+                Console.Write("Enter temperature in Celsius: ");
+                double celsius = double.Parse(Console.ReadLine());
 
-            //double Fahrenheit = (celsius * 9 / 5) + 32;
-            //Console.WriteLine($"{celsius} C equal to {Fahrenheit} F");
+                double fahrenheit = (celsius * 9 / 5) + 32;
+
+                Console.WriteLine("Temperature in Fahrenheit: " + fahrenheit);
+                Console.WriteLine("-------------------------------------------------");
+            }
+
 
             //--------------------------------
             // Simple Discount Calculator (4)
