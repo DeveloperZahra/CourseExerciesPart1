@@ -287,7 +287,7 @@ namespace CourseExerciesCsharp
                 Console.WriteLine("\ngood bye");
             }
 
-            //--------------------------------------------------------
+            
             //----------------- Basic ATM System (2)-----------------
             static void BasicATMSystem ()
             {
@@ -328,52 +328,42 @@ namespace CourseExerciesCsharp
                 }
             }
 
-            //--------------------------------------------------------
-            //------------------- Geometry Calculator------------
+          
+            //------------------- Geometry Calculator (3)------------
+            static void GeometryCalculator()
+            {
+                Console.WriteLine("Choose a shape to calculate:");
+                Console.WriteLine("1. Circle (Calculate Area & Circumference)\n");
+                Console.WriteLine("2. Square (Calculate Area & Perimeter)\n ");
+                Console.WriteLine("3. Triangle (Calculate Area)\n ");
 
-            //Console.WriteLine("Geometry Calculator");
-            //Console.WriteLine("Choose a shape to calculate:");
-            //Console.WriteLine("1. Circle (Calculate Area & Circumference)\n");
-            //Console.WriteLine("2. Square (Calculate Area & Perimeter)\n ");
-            //Console.WriteLine("3. Triangle (Calculate Area)\n ");
+                int choice = int.Parse(Console.ReadLine());
 
-            //Console.WriteLine("Enter the number corresponding to your shape choice:");
-            //string choice = Console.ReadLine();
+                switch (choice)
+                {
+                    case 1:
+                        Console.Write("Enter radius: ");
+                        double r = double.Parse(Console.ReadLine());
+                        Console.WriteLine($"Area: {Math.PI * r * r}, Circumference: {2 * Math.PI * r}");
+                        break;
+                    case 2:
+                        Console.Write("Enter side length: ");
+                        double s = double.Parse(Console.ReadLine());
+                        Console.WriteLine($"Area: {s * s}, Perimeter: {4 * s}");
+                        break;
+                    case 3:
+                        Console.Write("Enter base: ");
+                        double b = double.Parse(Console.ReadLine());
+                        Console.Write("Enter height: ");
+                        double h = double.Parse(Console.ReadLine());
+                        Console.WriteLine($"Area: {0.5 * b * h}");
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice!");
+                        break;
+                }
+            }
 
-            //switch (choice)
-            //{
-            //    case "1":
-            //        Console.WriteLine("Enter the redius of the circle:");
-            //        double redius = double.Parse(Console.ReadLine());
-            //        double areaCircle = Math.PI * Math.Pow(redius, 2);
-            //        double CircumferenceCircle = 2 * Math.PI * redius;
-            //        Console.WriteLine("area of the Circle: ");
-            //        Console.WriteLine("Circumference of the Circle: ");
-            //        break;
-
-            //    case "2":
-            //        Console.WriteLine("Enter the side length of the Square:");
-            //        double side = double.Parse(Console.ReadLine());
-            //        double AreaSquare = Math.Pow(side, 2);
-            //        double PerimeterSquare = 4 * side;
-            //        Console.WriteLine("area of the Square: ");
-            //        Console.WriteLine("Perimeter of the Square: ");
-            //        break;
-
-            //    case "3":
-
-            //        Console.WriteLine("Enter the base  of the Triangle :");
-            //        double baseTrinagle  = double.Parse(Console.ReadLine());
-            //        Console.WriteLine("Enter the height  of the Triangle :");
-            //        double heightTriangle  = double.Parse(Console.ReadLine());
-            //        double areaTriangle  = 0.5 * baseTrinagle * heightTriangle;
-            //        Console.WriteLine("area of the triangle : ");
-            //        break;
-            //    default:
-            //        Console.WriteLine("Invalid choice. Please select a valid option. ");
-            //        break;
-
-            //}
             //---------------------------------------------------------
             //--------------Factorial of a Number-----------------
 
