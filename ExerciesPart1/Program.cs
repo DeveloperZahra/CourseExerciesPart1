@@ -7,6 +7,7 @@ namespace CourseExerciesCsharp
     {
         static void Main(string[] args)
         {
+            //------------Part 1--------------
             //------------- EvenOrOddNumber (1)----------
             static void EvenOrOddNumber()
 
@@ -210,64 +211,82 @@ namespace CourseExerciesCsharp
                 }
             }
 
-            //----------------------------------------------
-            // ----------------Simple Calculator (Switch-Case)------------------
+            //---------------Part 2-----------------------
+            // ----------------Simple Calculator (Switch-Case) ------------------
+            static void SimpleCalculatorSwitchCase()
+            {
+                char choice;
 
-            //Console.Clear();
-            //Console.WriteLine("Enter the operation number :\n1. Addition\n2. Subtraction ");
-            //Console.WriteLine("3. Multiplication\n4. Division");
+                do
+                {
+                    Console.Clear();
+                    Console.WriteLine("Enter the operation number :\n1. Addition\n2. Subtraction ");
+                    Console.WriteLine("3. Multiplication\n4. Division");
 
-            //int OperationNumber = int.Parse(Console.ReadLine());
+                    int OperationNumber = int.Parse(Console.ReadLine());
 
-            //Console.WriteLine("Enter first number :");
-            //int num1 = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter first number :");
+                    int FirstNumber = int.Parse(Console.ReadLine());
 
-            //Console.WriteLine("Enter second number :");
-            //int num2 = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter first number :");
+                    int SecondNumber = int.Parse(Console.ReadLine());
 
-            //double result = 0;
 
-            //bool isActive = false;
+                    double result = 0;
 
-            //switch (OperationNumber)
-            //{
-            //    case 1:
-            //        result = num1 + num2;
-            //        break;
+                    bool isActive = false;
 
-            //    case 2:
-            //        result = num1 - num2;
-            //        break;
+                    switch (OperationNumber)
+                    {
 
-            //    case 3:
-            //        result = num1 * num2;
-            //        break;
 
-            //    case 4:
+                        case 1:
+                            result = FirstNumber + SecondNumber;
+                            break;
 
-            //        if (num2 == 0)
-            //        {
-            //            Console.WriteLine("Division by zero not allowed");
-            //            isActive = true;
+                        case 2:
+                            result = FirstNumber - SecondNumber;
+                            break;
 
-            //        }
-            //        else
-            //        {
-            //            result = num1 / num2;
-            //        }
+                        case 3:
+                            result = FirstNumber * SecondNumber;
+                            break;
 
-            //        break;
+                        case 4:
 
-            //    default:
-            //        Console.WriteLine("Error! ");
-            //        isActive = true;
-            //        break;
+                            if (SecondNumber == 0)
+                            {
+                                Console.WriteLine("Division by zero not allowed");
+                                isActive = true;
 
-            //}
-            //if (!isActive)
-            //{
-            //    Console.WriteLine(result);
-            //}
+                            }
+                            else
+                            {
+                                result = FirstNumber / SecondNumber;
+                            }
+
+                            break;
+
+                        default:
+                            Console.WriteLine("Wrong Choice");
+                            isActive = true;
+                            break;
+                    }
+
+
+                    if (!isActive)
+                    {
+                        Console.WriteLine(result);
+                    }
+
+                    Console.WriteLine("Do you want another operation ? y / n");
+                    choice = Console.ReadKey().KeyChar;
+
+                } while (choice == 'y' || choice == 'Y');
+
+                Console.WriteLine("\ngood bye");
+            }
+
             //--------------------------------------------------------
             //----------------- Basic ATM System-----------------
             //char choice;
