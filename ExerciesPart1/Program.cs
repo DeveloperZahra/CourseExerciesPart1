@@ -201,36 +201,85 @@ namespace CourseExerciesCsharp
 
 
         //-------Search for a Number in an Array (5)----------
-
-        //Console.Write("Enter the number of elements: ");
-        //int N = int.Parse(Console.ReadLine());
-
-
-        //int[] arr = new int[N];
+        static void SearchforaNumberinanArray()
+        {
+            Console.Write("Enter the number of elements: ");
+            int N = int.Parse(Console.ReadLine());
 
 
-        //Console.WriteLine("Enter the elements:");
-        //for (int i = 0; i < N; i++)
-        //{
-        //    arr[i] = int.Parse(Console.ReadLine());
-        //}
+            int[] arr = new int[N];
 
 
-        //Console.Write("Enter the number to search for: ");
-        //int searchNumber = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the elements:");
+            for (int i = 0; i < N; i++)
+            {
+                arr[i] = int.Parse(Console.ReadLine());
+            }
 
 
-        //int index = Array.IndexOf(arr, searchNumber);
+            Console.Write("Enter the number to search for: ");
+            int searchNumber = int.Parse(Console.ReadLine());
 
 
-        //if (index != -1)
-        //{
-        //    Console.WriteLine("Number :" +searchNumber, "found at index" +index);
-        //}
-        //else
-        //{
-        //    Console.WriteLine("Number {searchNumber} not found in the array.");
-        //}
+            int index = Array.IndexOf(arr, searchNumber);
+
+
+            if (index != -1)
+            {
+                Console.WriteLine("Number :" + searchNumber, "found at index" + index);
+            }
+            else
+            {
+                Console.WriteLine("Number {searchNumber} not found in the array.");
+            }
+            //another solution__________
+
+            //Console.Write("Enter the number of elements: ");
+            //int n = int.Parse(Console.ReadLine());
+            //int[] arr = new int[n];
+
+            //Console.WriteLine("Enter elements:");
+            //for (int i = 0; i < n; i++)
+            //    arr[i] = int.Parse(Console.ReadLine());
+
+            //Console.Write("Enter number to search: ");
+            //int search = int.Parse(Console.ReadLine());
+
+            ////int index = Array.IndexOf(arr, search);
+
+            //int index = -1;
+            //int[] indexes = new int[arr.Length];
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+
+            //    if (arr[i] == search)
+            //    {
+            //        // Console.WriteLine(i);
+            //        index = i;
+            //        break;
+            //    }
+            //    //if (arr[i]==search)
+            //    //{
+            //    //    indexes[i] = i;
+            //    //}
+
+
+
+
+            //}
+
+            //if (index != -1)
+            //    Console.WriteLine(index);
+            //else
+            //    Console.WriteLine("not found");
+
+
+
+            //Console.WriteLine(index == -1 ? "Number not found." : $"Number found at index {index}");
+        }
+
+
         //------------Sorting an Array (Ascending Order) (6)-----------------
         //Console.Write("Enter the number of elements:  ");
         //int N = int.Parse(Console.ReadLine());
