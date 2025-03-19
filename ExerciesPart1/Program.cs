@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Numerics;
+using System.Security.Cryptography;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CourseExerciesCsharp
@@ -89,7 +90,7 @@ namespace CourseExerciesCsharp
             }
             Console.WriteLine("the maximum value is:\n" + max);
             Console.WriteLine("the minimum value is:\n" + min);
-            //anather solution--------
+            //another solution --------
 
             //Console.Write("Enter the number of elements: ");
             //int n = int.Parse(Console.ReadLine());
@@ -114,30 +115,50 @@ namespace CourseExerciesCsharp
 
 
         //-----------Count Even & Odd Numbers (3)-----------
+        static void CountEvenAndOddNumbers()
+        {
+            Console.Write("Enter the number of  elements:");
+            int N = int.Parse(Console.ReadLine());
+            int[] numbers = new int[N];
+            Console.WriteLine("Please Enter numbers: " + N);
 
-        //Console.Write("Enter the number of  elements:" );
-        //int N = int.Parse(Console.ReadLine());
-        //int[] numbers = new int[N];
-        //Console.WriteLine("Please Enter numbers: " +N);
+            for (int i = 0; i < N; i++)
+            {
+                Console.Write("Enter numbers: " + i + 1);
+                numbers[i] = int.Parse(Console.ReadLine());
+            }
 
-        //for (int i = 0; i < N; i++)
-        //{
-        //    Console.Write("Enter numbers: " + i + 1);
-        //     numbers[i] = int.Parse(Console.ReadLine());
-        //}
+            int EvenCount = 0;
+            int OddCount = 0;
 
-        //int EvenCount = 0;
-        //int OddCount = 0;
+            if (N % 2 == 0)
+            {
+                Console.WriteLine("number is even." + EvenCount);
+            }
 
-        //if (N % 2 == 0)
-        //{
-        //    Console.WriteLine("number is even." + EvenCount);
-        //}
+            else
+            {
+                Console.WriteLine("---------------------------------");
+            }
+            //another solution 
+            //Console.Write("Enter the number of elements: ");
+            //int n = int.Parse(Console.ReadLine());
+            //int[] arr = new int[n];
 
-        //else
-        //{
-        //    Console.WriteLine("---------------------------------");
-        //}
+            //int evenCount = 0, oddCount = 0;
+            //Console.WriteLine("Enter elements:");
+            //for (int i = 0; i < n; i++)
+            //{
+            //    arr[i] = int.Parse(Console.ReadLine());
+            //    if (arr[i] % 2 == 0) evenCount++;
+            //    else oddCount++;
+            //}
+
+            //Console.WriteLine("Even Count:" + evenCount + " Odd Count:" + oddCount);
+            //Console.WriteLine($"Even count: {evenCount} Odd count: {oddCount}");
+        }
+
+
         //-----------------Reverse an Array (4)------------
         //Console.Write("Enter the number of elements: ");
         //int N = int.Parse(Console.ReadLine());
