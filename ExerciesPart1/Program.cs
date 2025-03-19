@@ -160,25 +160,45 @@ namespace CourseExerciesCsharp
 
 
         //-----------------Reverse an Array (4)------------
-        //Console.Write("Enter the number of elements: ");
-        //int N = int.Parse(Console.ReadLine());
+        static void ReverseAnArray()
+        {
+            Console.Write("Enter the number of elements: ");
+            int N = int.Parse(Console.ReadLine());
 
 
-        //int[] arr = new int[N];
+            int[] arr = new int[N];
 
-        //Console.WriteLine("Enter the elements:");
+            Console.WriteLine("Enter the elements:");
 
-        //for (int i = 0; i < N; i++)
-        //{
-        //    Array.Reverse(arr);
+            for (int i = 0; i < N; i++)
+            {
+                Array.Reverse(arr);
 
-        //    {
-        //        Console.Write(N + " ");
+                {
+                    Console.Write(N + " ");
 
-        //    }
-        //    arr[i] = int.Parse(Console.ReadLine());
-        //}
-        //Console.WriteLine("Reversed Array:");
+                }
+                arr[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Reversed Array:");
+
+            //another solution________
+
+            //Console.Write("Enter the number of elements: ");
+            //int n = int.Parse(Console.ReadLine());
+            //int[] arr = new int[n];
+
+            //Console.WriteLine("Enter elements:");
+            //for (int i = 0; i < n; i++)
+            //    arr[i] = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Reversed Array:");
+            //for (int i = n - 1; i >= 0; i--)
+            //    Console.Write(arr[i] + " ");
+            //Console.WriteLine();
+
+        }
+
 
         //-------Search for a Number in an Array (5)----------
 
