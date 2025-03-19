@@ -350,7 +350,31 @@ namespace CourseExerciesCsharp
 
         }
 
+        //-----------Find Second Largest Number in an Array (9)-------
+        static void FindSecondLargestNumberinanArray()
+        {
+            Console.Write("Enter the number of elements: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] arr = new int[n];
 
+            Console.WriteLine("Enter elements:");
+            for (int i = 0; i < n; i++) arr[i] = int.Parse(Console.ReadLine());
+
+            int largest = int.MinValue, secondLargest = int.MinValue;
+
+            for (int i = 0; i < n; i++)
+            {
+                if (arr[i] > largest)
+                {
+                    secondLargest = largest;
+                    largest = arr[i];
+                }
+                else if (arr[i] > secondLargest && arr[i] != largest)
+                    secondLargest = arr[i];
+            }
+            Console.WriteLine($"Second Largest: {secondLargest}");
+
+        }
 
 
 
