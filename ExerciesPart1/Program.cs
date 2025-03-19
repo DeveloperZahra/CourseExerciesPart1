@@ -281,25 +281,21 @@ namespace CourseExerciesCsharp
 
 
         //------------Sorting an Array (Ascending Order) (6)-----------------
-        //Console.Write("Enter the number of elements:  ");
-        //int N = int.Parse(Console.ReadLine());
-        //int[] numbers = new int[N];
+        static void SortinganArray()
+        {
+            Console.Write("Enter the number of elements: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] arr = new int[n];
 
-        //Console.WriteLine("Enter numbers:" + N);
+            Console.WriteLine("Enter elements:");
+            for (int i = 0; i < n; i++)
+                arr[i] = int.Parse(Console.ReadLine());
 
-        //for (int i=0; i<N; i++)
-        //{
-        //    numbers[i] = int.Parse(Console.ReadLine());
+            Array.Sort(arr);
+            Console.WriteLine("Sorted Array: " + string.Join(" ", arr));
+        }
 
-        //}
-        //Array.Sort(numbers);
-        //Console.WriteLine("the number in ascending order are:  \n");
 
-        //for (int i = 0; i < N; i++)
-        //{
-        //    Console.WriteLine("numbers is:" + numbers[ i]); 
-
-        //}
 
         //---------------Merging Two Arrays (7)----------------
 
