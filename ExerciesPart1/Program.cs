@@ -11,6 +11,45 @@ namespace CourseExerciesCsharp
         static void Main(string[] args)
 
         {
+
+            //Exercises part1___
+
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("\nSelect a Program:");
+                Console.WriteLine("1. Even Or Odd Number");
+                Console.WriteLine("2. the largest Number");
+                Console.WriteLine("3. Temperature Converter");
+                Console.WriteLine("4. Simple Discount Calculator");
+                Console.WriteLine("5.  Grading System");
+                Console.WriteLine("6. Swap Two Numbers");
+                Console.WriteLine("7. Days to Weeks and Days Converte");
+                Console.WriteLine("8. Electricity Bill Calculator");
+                Console.WriteLine("9. Simple Calculator");
+                Console.WriteLine("0. Exit");
+
+                Console.Write("Enter your choice: ");
+                int choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1: EvenOrOddNumber(); break;
+                    case 2: largestNumber(); break;
+                    case 3: TemperatureConverter(); break;
+                    case 4: SimpleDiscountCalculator(); break;
+                    case 5: GradingSystem(); break;
+                    case 6: SwapTwoNumbers(); break;
+                    case 7: DaystoWeeksandDaysConverte(); break;
+                    case 8: ElectricityBillCalculator(); break;
+                    case 9: SimpleCalculator(); break;
+                    case 0: return;
+                    default: Console.WriteLine("Invalid Choice! Try again."); break;
+                }
+                Console.ReadLine();
+            }
+
+
             //Exercises part2___
 
             //while (true)
