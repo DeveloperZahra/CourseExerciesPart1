@@ -298,26 +298,31 @@ namespace CourseExerciesCsharp
 
 
         //---------------Merging Two Arrays (7)----------------
-
-        Console.Write("Enter the size for each array:     ");
+        static void MergingTwoArrays()
+        {
+            Console.Write("Enter the size of the arrays: ");
             int n = int.Parse(Console.ReadLine());
+            int[] arr1 = new int[n], arr2 = new int[n], merged = new int[2 * n];
 
-            int[] array1 = new int[n];
-            int[] array2 = new int[n];
+            Console.WriteLine("Enter first array:");
+            for (int i = 0; i < n; i++) arr1[i] = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter element for  the first array :    " +n);
+            Console.WriteLine("Enter second array:");
+            for (int i = 0; i < n; i++) arr2[i] = int.Parse(Console.ReadLine());
+
             for (int i = 0; i < n; i++)
-            {
-                Console.Write("enter elemnt: " + i + 1);
-                array1[i] = int.Parse(Console.ReadLine());
-            }
+                merged[i] = arr1[i];
 
-            Console.WriteLine("Enter element for  the second array :    " + n);
             for (int i = 0; i < n; i++)
-            {
-                Console.Write("enter elemnt: " + i + 1);
-                array2[i] = int.Parse(Console.ReadLine());
-            }
+                merged[n + i] = arr2[i];
+
+            Console.WriteLine("Merged Array:");
+            for (int i = 0; i < 2 * n; i++)
+                Console.Write(merged[i] + " ");
+            Console.WriteLine();
+
+        }
+       
 
         
 
