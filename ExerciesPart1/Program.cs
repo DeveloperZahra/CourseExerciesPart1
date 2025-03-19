@@ -11,6 +11,8 @@ namespace CourseExerciesCsharp
         static void Main(string[] args)
 
         {
+            //Exercises part2___
+
             //while (true)
             //{
             //    Console.Clear();
@@ -47,6 +49,44 @@ namespace CourseExerciesCsharp
             //    }
             //    Console.ReadLine();
             //}
+            //Exercises part3______
+
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("\nChoose an Array Exercise:");
+                Console.WriteLine("1. Array Initialization & Output");
+                Console.WriteLine("2. Find Maximum & Minimum in an Array");
+                Console.WriteLine("3. Count Even & Odd Numbers");
+                Console.WriteLine("4. Reverse an Array");
+                Console.WriteLine("5. Search for a Number in an Array");
+                Console.WriteLine("6. Sorting an Array (Ascending Order)");
+                Console.WriteLine("7. Merging Two Arrays");
+                Console.WriteLine("8. Remove Duplicates from an Array");
+                Console.WriteLine("9. Find Second Largest Number");
+                Console.WriteLine("0. Exit");
+                Console.Write("Enter your choice: ");
+
+                int choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1: ArrayInitializationAndOutput(); break;
+                    case 2: FindMaximumAndMinimuminanArray(); break;
+                    case 3: CountEvenAndOddNumbers(); break;
+                    case 4: ReverseAnArray(); break;
+                    case 5: SearchforaNumberinanArray(); break;
+                    case 6: SortinganArray(); break;
+                    case 7: MergingTwoArrays(); break;
+                    case 8: RemoveDuplicatesfromanArray(); break;
+                    case 9: SimpleCalculator(); break;
+                    case 0: return;
+                    default: Console.WriteLine("Invalid choice! Try again."); break;
+                }
+
+                Console.ReadLine();
+            }
+
         }
             //---------Part (3) -------------
 
@@ -62,8 +102,6 @@ namespace CourseExerciesCsharp
             Console.WriteLine();
         }
     
-
-
 
         //------------Find Maximum & Minimum in an Array (2)---------
         static void FindMaximumAndMinimuminanArray()
@@ -295,8 +333,6 @@ namespace CourseExerciesCsharp
             Console.WriteLine("Sorted Array: " + string.Join(" ", arr));
         }
 
-
-
         //---------------Merging Two Arrays (7)----------------
         static void MergingTwoArrays()
         {
@@ -375,9 +411,6 @@ namespace CourseExerciesCsharp
             Console.WriteLine($"Second Largest: {secondLargest}");
 
         }
-
-
-
 
 
         //------------Part( 1 )--------------
