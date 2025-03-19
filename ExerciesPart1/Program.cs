@@ -10,43 +10,209 @@ namespace CourseExerciesCsharp
         static void Main(string[] args)
 
         {
-            while (true)
-            {
-                Console.Clear();
-                Console.WriteLine("\nSelect a Program:");
-                Console.WriteLine("1. Simple Calculator");
-                Console.WriteLine("2. Basic ATM System");
-                Console.WriteLine("3. Geometry Calculator");
-                Console.WriteLine("4. Factorial of a Number");
-                Console.WriteLine("5. Sum of Even and Odd Numbers");
-                Console.WriteLine("6. Scientific Calculator");
-                Console.WriteLine("7. Print Triangle Pattern");
-                Console.WriteLine("8. Print Pyramid Pattern");
-                Console.WriteLine("9. Print Diamond Pattern");
-                Console.WriteLine("10. Guess the Number Game");
-                Console.WriteLine("0. Exit");
+            //while (true)
+            //{
+            //    Console.Clear();
+            //    Console.WriteLine("\nSelect a Program:");
+            //    Console.WriteLine("1. Simple Calculator");
+            //    Console.WriteLine("2. Basic ATM System");
+            //    Console.WriteLine("3. Geometry Calculator");
+            //    Console.WriteLine("4. Factorial of a Number");
+            //    Console.WriteLine("5. Sum of Even and Odd Numbers");
+            //    Console.WriteLine("6. Scientific Calculator");
+            //    Console.WriteLine("7. Print Triangle Pattern");
+            //    Console.WriteLine("8. Print Pyramid Pattern");
+            //    Console.WriteLine("9. Print Diamond Pattern");
+            //    Console.WriteLine("10. Guess the Number Game");
+            //    Console.WriteLine("0. Exit");
 
-                Console.Write("Enter your choice: ");
-                int choice = int.Parse(Console.ReadLine());
+            //    Console.Write("Enter your choice: ");
+            //    int choice = int.Parse(Console.ReadLine());
 
-                switch (choice)
-                {
-                    case 1: SimpleCalculator(); break;
-                    case 2: BasicATMSystem(); break;
-                    case 3: GeometryCalculator(); break;
-                    case 4: FactorialOfANumber(); break;
-                    case 5: SumOfEvenAndOddNumbers(); break;
-                    case 6: ScientificCalculator(); break;
-                    case 7: PrintPattern(); break;
-                    case 8: PrintAPyramidPattern(); break;
-                    case 9: PrintADiamondPattern(); break;
-                    case 10: GuessGame(); break;
-                    case 0: return;
-                    default: Console.WriteLine("Invalid Choice! Try again."); break;
-                }
-                Console.ReadLine();
-            }
+            //    switch (choice)
+            //    {
+            //        case 1: SimpleCalculator(); break;
+            //        case 2: BasicATMSystem(); break;
+            //        case 3: GeometryCalculator(); break;
+            //        case 4: FactorialOfANumber(); break;
+            //        case 5: SumOfEvenAndOddNumbers(); break;
+            //        case 6: ScientificCalculator(); break;
+            //        case 7: PrintPattern(); break;
+            //        case 8: PrintAPyramidPattern(); break;
+            //        case 9: PrintADiamondPattern(); break;
+            //        case 10: GuessGame(); break;
+            //        case 0: return;
+            //        default: Console.WriteLine("Invalid Choice! Try again."); break;
+            //    }
+            //    Console.ReadLine();
+            //}
         }
+            //---------Part (3) -------------
+
+            //---------Array Initialization & Output (1)----------
+            static void ArrayInitializationAndOutput()
+        {
+            int[] arr = { 20, 25, 30, 35, 40 };
+
+            Console.WriteLine("Array Elements:");
+            for (int i = 0; i < arr.Length; i++)
+                Console.Write(arr[i] + " ");
+
+            Console.WriteLine();
+        }
+    }
+
+
+
+        //------------Find Maximum & Minimum in an Array (2)---------
+
+        //int[] numbers = new int[10];
+        //Console.WriteLine("Please Enter 10 numbers:\n  ");
+        //for (int i=0; i < 10; i++)
+        //{
+        //    Console.Write("Enter numbers: \n" + i + 1);
+        //    numbers[i] = int.Parse(Console.ReadLine());
+        //}
+        //int max = numbers[0];
+        //int min = numbers[0];
+        //for (int i=1; i < 10; i++)
+        //{
+        //    if (numbers[i] > max)
+        //    {
+        //        max = numbers[i];
+        //    }
+        //    if (numbers[i] < min)
+        //    {
+        //        min = numbers[i];
+        //    }
+        //}
+        //Console.WriteLine("the maximum value is:\n" +max);
+        //Console.WriteLine("the minimum value is:\n" + min);
+
+        //-----------Count Even & Odd Numbers (3)-----------
+
+        //Console.Write("Enter the number of  elements:" );
+        //int N = int.Parse(Console.ReadLine());
+        //int[] numbers = new int[N];
+        //Console.WriteLine("Please Enter numbers: " +N);
+
+        //for (int i = 0; i < N; i++)
+        //{
+        //    Console.Write("Enter numbers: " + i + 1);
+        //     numbers[i] = int.Parse(Console.ReadLine());
+        //}
+
+        //int EvenCount = 0;
+        //int OddCount = 0;
+
+        //if (N % 2 == 0)
+        //{
+        //    Console.WriteLine("number is even." + EvenCount);
+        //}
+
+        //else
+        //{
+        //    Console.WriteLine("---------------------------------");
+        //}
+        //-----------------Reverse an Array (4)------------
+        //Console.Write("Enter the number of elements: ");
+        //int N = int.Parse(Console.ReadLine());
+
+
+        //int[] arr = new int[N];
+
+        //Console.WriteLine("Enter the elements:");
+
+        //for (int i = 0; i < N; i++)
+        //{
+        //    Array.Reverse(arr);
+
+        //    {
+        //        Console.Write(N + " ");
+
+        //    }
+        //    arr[i] = int.Parse(Console.ReadLine());
+        //}
+        //Console.WriteLine("Reversed Array:");
+
+        //-------Search for a Number in an Array (5)----------
+
+        //Console.Write("Enter the number of elements: ");
+        //int N = int.Parse(Console.ReadLine());
+
+
+        //int[] arr = new int[N];
+
+
+        //Console.WriteLine("Enter the elements:");
+        //for (int i = 0; i < N; i++)
+        //{
+        //    arr[i] = int.Parse(Console.ReadLine());
+        //}
+
+
+        //Console.Write("Enter the number to search for: ");
+        //int searchNumber = int.Parse(Console.ReadLine());
+
+
+        //int index = Array.IndexOf(arr, searchNumber);
+
+
+        //if (index != -1)
+        //{
+        //    Console.WriteLine("Number :" +searchNumber, "found at index" +index);
+        //}
+        //else
+        //{
+        //    Console.WriteLine("Number {searchNumber} not found in the array.");
+        //}
+        //------------Sorting an Array (Ascending Order) (6)-----------------
+        //Console.Write("Enter the number of elements:  ");
+        //int N = int.Parse(Console.ReadLine());
+        //int[] numbers = new int[N];
+
+        //Console.WriteLine("Enter numbers:" + N);
+
+        //for (int i=0; i<N; i++)
+        //{
+        //    numbers[i] = int.Parse(Console.ReadLine());
+
+        //}
+        //Array.Sort(numbers);
+        //Console.WriteLine("the number in ascending order are:  \n");
+
+        //for (int i = 0; i < N; i++)
+        //{
+        //    Console.WriteLine("numbers is:" + numbers[ i]); 
+
+        //}
+
+        //---------------Merging Two Arrays (7)----------------
+
+        Console.Write("Enter the size for each array:     ");
+            int n = int.Parse(Console.ReadLine());
+
+            int[] array1 = new int[n];
+            int[] array2 = new int[n];
+
+            Console.WriteLine("Enter element for  the first array :    " +n);
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("enter elemnt: " + i + 1);
+                array1[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Enter element for  the second array :    " + n);
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("enter elemnt: " + i + 1);
+                array2[i] = int.Parse(Console.ReadLine());
+            }
+
+        
+
+
+
 
         //------------Part( 1 )--------------
         //------------- EvenOrOddNumber (1)----------
@@ -244,10 +410,10 @@ namespace CourseExerciesCsharp
 
             switch (op)
             {
-                case '+': Console.WriteLine($"Result: {num1 + num2}"); break;
-                case '-': Console.WriteLine($"Result: {num1 - num2}"); break;
-                case '*': Console.WriteLine($"Result: {num1 * num2}"); break;
-                case '/': Console.WriteLine(num2 != 0 ? $"Result: {num1 / num2}" : "Error: Division by zero!"); break;
+                case '+': Console.WriteLine("Result: {num1 + num2}"); break;
+                case '-': Console.WriteLine("Result: {num1 - num2}"); break;
+                case '*': Console.WriteLine("Result: {num1 * num2}"); break;
+                case '/': Console.WriteLine(num2 != 0 ? "Result: {num1 / num2}" : "Error: Division by zero!"); break;
                 default: Console.WriteLine("Invalid operator!"); break;
             }
         }
@@ -355,10 +521,10 @@ namespace CourseExerciesCsharp
                         Console.Write("Enter deposit amount: ");
                         double deposit = double.Parse(Console.ReadLine());
                         balance += deposit;
-                        Console.WriteLine($"Deposit successful! New balance: {balance}");
+                        Console.WriteLine("Deposit successful! New balance: {balance}");
                         break;
                     case 3:
-                        Console.WriteLine($"Current Balance: {balance}");
+                        Console.WriteLine("Current Balance: {balance}");
                         break;
                     case 4:
                         return;
@@ -385,19 +551,19 @@ namespace CourseExerciesCsharp
                 case 1:
                     Console.Write("Enter radius: ");
                     double r = double.Parse(Console.ReadLine());
-                    Console.WriteLine($"Area: {Math.PI * r * r}, Circumference: {2 * Math.PI * r}");
+                    Console.WriteLine("Area: {Math.PI * r * r}, Circumference: {2 * Math.PI * r}");
                     break;
                 case 2:
                     Console.Write("Enter side length: ");
                     double s = double.Parse(Console.ReadLine());
-                    Console.WriteLine($"Area: {s * s}, Perimeter: {4 * s}");
+                    Console.WriteLine("Area: {s * s}, Perimeter: {4 * s}");
                     break;
                 case 3:
                     Console.Write("Enter base: ");
                     double b = double.Parse(Console.ReadLine());
                     Console.Write("Enter height: ");
                     double h = double.Parse(Console.ReadLine());
-                    Console.WriteLine($"Area: {0.5 * b * h}");
+                    Console.WriteLine("Area: {0.5 * b * h}");
                     break;
                 default:
                     Console.WriteLine("Invalid choice!");
@@ -412,7 +578,7 @@ namespace CourseExerciesCsharp
             int n = int.Parse(Console.ReadLine());
             long fact = 1;
             for (int i = 1; i <= n; i++) fact *= i;
-            Console.WriteLine($"Factorial: {fact}");
+            Console.WriteLine("Factorial: {fact}");
 
         }
 
@@ -438,15 +604,15 @@ namespace CourseExerciesCsharp
 
             switch (op)
             {
-                case "sin": Console.WriteLine($"Result: {Math.Sin(num)}"); break;
-                case "cos": Console.WriteLine($"Result: {Math.Cos(num)}"); break;
-                case "tan": Console.WriteLine($"Result: {Math.Tan(num)}"); break;
-                case "sqrt": Console.WriteLine($"Result: {Math.Sqrt(num)}"); break;
-                case "log": Console.WriteLine($"Result: {Math.Log(num)}"); break;
+                case "sin": Console.WriteLine("Result: {Math.Sin(num)}"); break;
+                case "cos": Console.WriteLine("Result: {Math.Cos(num)}"); break;
+                case "tan": Console.WriteLine("Result: {Math.Tan(num)}"); break;
+                case "sqrt": Console.WriteLine("Result: {Math.Sqrt(num)}"); break;
+                case "log": Console.WriteLine("Result: {Math.Log(num)}"); break;
                 case "pow":
                     Console.Write("Enter exponent: ");
                     double exp = double.Parse(Console.ReadLine());
-                    Console.WriteLine($"Result: {Math.Pow(num, exp)}");
+                    Console.WriteLine("Result: {Math.Pow(num, exp)}");
                     break;
                 default: Console.WriteLine("Invalid operation!"); break;
             }
