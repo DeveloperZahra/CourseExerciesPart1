@@ -60,34 +60,58 @@ namespace CourseExerciesCsharp
 
             Console.WriteLine();
         }
-    }
+    
 
 
 
         //------------Find Maximum & Minimum in an Array (2)---------
+        static void FindMaximumAndMinimuminanArray()
+        {
+            int[] numbers = new int[10];
+            Console.WriteLine("Please Enter 10 numbers:\n  ");
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write("Enter numbers: \n" + i + 1);
+                numbers[i] = int.Parse(Console.ReadLine());
+            }
+            int max = numbers[0];
+            int min = numbers[0];
+            for (int i = 1; i < 10; i++)
+            {
+                if (numbers[i] > max)
+                {
+                    max = numbers[i];
+                }
+                if (numbers[i] < min)
+                {
+                    min = numbers[i];
+                }
+            }
+            Console.WriteLine("the maximum value is:\n" + max);
+            Console.WriteLine("the minimum value is:\n" + min);
+            //anather solution--------
 
-        //int[] numbers = new int[10];
-        //Console.WriteLine("Please Enter 10 numbers:\n  ");
-        //for (int i=0; i < 10; i++)
-        //{
-        //    Console.Write("Enter numbers: \n" + i + 1);
-        //    numbers[i] = int.Parse(Console.ReadLine());
-        //}
-        //int max = numbers[0];
-        //int min = numbers[0];
-        //for (int i=1; i < 10; i++)
-        //{
-        //    if (numbers[i] > max)
-        //    {
-        //        max = numbers[i];
-        //    }
-        //    if (numbers[i] < min)
-        //    {
-        //        min = numbers[i];
-        //    }
-        //}
-        //Console.WriteLine("the maximum value is:\n" +max);
-        //Console.WriteLine("the minimum value is:\n" + min);
+            //Console.Write("Enter the number of elements: ");
+            //int n = int.Parse(Console.ReadLine());
+            //int[] arr = new int[n];
+
+            //Console.WriteLine("Enter numbers:");
+            //for (int i = 0; i < n; i++)
+            //    arr[i] = int.Parse(Console.ReadLine());
+
+            //int max = arr[0], min = arr[0];
+            //for (int i = 1; i < arr.Length; i++)
+            //{
+            //    if (arr[i] > max)
+            //        max = arr[i];
+
+            //    if (arr[i] < min)
+            //        min = arr[i];
+            //}
+            //Console.WriteLine($"Max: {max}, Min: {min}");
+
+        }
+
 
         //-----------Count Even & Odd Numbers (3)-----------
 
